@@ -6,13 +6,16 @@
 
 # コマンド説明
 
-# みんなが使えるコマンド
+## みんなが使えるコマンド
 
 `/ps on`: 機能を有効化します
+
 `/ps off`: 機能を無効化します
 
-# OPが使えるコマンド
+## OPが使えるコマンド
 
 `/ps opSettings add <MaterialName>` : 禁止アイテムを追加します
+
 `/ps opSettings remove <MaterialName>` : 禁止アイテムを削除します
+
 `/ps opSettings config` : ConfigLibのコマンドにつながります
