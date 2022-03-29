@@ -1,0 +1,5 @@
+name: PretendSurvival
+version: '${project.version}'
+main: net.numalab.pretend_survival.PretendSurvival
+api-version: 1.16
+authors: [ Bun133 ]
