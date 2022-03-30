@@ -40,6 +40,7 @@ class PSGUI(val psConfig: PSConfig) {
             builder.item(x, y) {
                 stack(itemStack)
                 click { onClick(it, itemStack) }
+                shiftClick { onShiftClick(it, itemStack) }
                 markAsUnMovable()
             }
         }
@@ -47,5 +48,12 @@ class PSGUI(val psConfig: PSConfig) {
 
     private fun onClick(e: InventoryClickEvent, itemStack: ItemStack) {
         e.whoClicked.inventory.addItem(itemStack)
+    }
+
+    private fun onShiftClick(e: InventoryClickEvent, itemStack: ItemStack) {
+        val amount = itemStack.type.maxStackSize - 1
+        if (amount > 0) {
+            e.whoClicked.inventory.addItem(itemStack.clone().also { it.amount = amount })
+        }
     }
 }
